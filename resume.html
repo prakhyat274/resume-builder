@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style2.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+
+	<title>Build Resume</title>
+</head>
+<body>
+	<!-- HTML CODE -->
+	<section class="header2" id="header-2">
+		<nav>
+			<a href="index.html"><img src="logo.png"></a>
+			<div class="nav-links-2">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<div class="container" id="cv-form">
+		
+
+		<div class="row">
+
+			<div class="form-col">
+				<!-- first col -->
+
+				<h3 >Personal Information</h3>
+				<div class="form-group mt-2">
+				
+					<label for="nameField">Your Name</label>
+					<input type="text" id="nameField" placeholder="Enter Name" class="form-control" />
+
+				</div>
+
+				<div class="form-group mt-2">
+				
+					<label for="nameField">Phone Number</label>
+					<input type="text" id="contactField" placeholder="Enter Number" class="form-control" />
+
+				</div>
+
+				<div class="form-group mt-2">
+				
+					<label for="mailField">Mail</label>
+					<input type="text" id="mailField" placeholder="Enter Here" class="form-control" />
+
+				</div>	
+			</div>
+			<div class="form-col-2">
+				<!-- second col -->
+
+				<br>
+				<h3>Professional Information</h3>
+				<div class="form-group mt-2">
+				
+					<label for="nameField">Objective</label>
+					<textarea id="objField" placeholder="Enter Here" rows="3" class="form-control"></textarea>
+
+				</div>
+				<div class="form-group mt-2" id="we">
+				
+					<label for="">Work Experience</label><br>
+					<textarea placeholder="Enter Here" class="form-control weField" rows="3"></textarea>
+
+					<!-- new text area -->
+
+					<div class="container text-center mt-2" id="weAddButton">
+
+						<button onclick="addNewWEField()" class="hero-btn my-3">Add +</button>
+						
+					</div>
+
+				</div>
+				<div class="form-group mt-2" id="aq">
+				
+					<label for="nameField">Academic Qualification</label>
+					<textarea id="contactField" placeholder="Enter Here" rows="3" class="form-control aqField"></textarea>
+
+					<!-- new text area -->
+
+					<div class="container text-center mt-2" id="aqAddButton">
+
+						<button onclick="addNewAQField()" class="hero-btn my-3">Add +</button>
+						
+					</div>
+
+				</div>
+
+				<div class="form-group mt-2" id="ts">
+				
+					<label for="nameField">Technical Skills</label>
+					<textarea id="contactField" placeholder="Enter Here" rows="3" class="form-control tsField"></textarea>
+
+					<!-- new text area -->
+
+					<div class="container text-center mt-2" id="tsAddButton">
+
+						<button onclick="addNewTSField()" class="hero-btn my-3">Add +</button>
+						
+					</div>
+
+				</div>
+
+				<div class="form-group mt-2" id="hob">
+				
+					<label for="nameField">Hobbies</label>
+					<textarea id="contactField" placeholder="Enter Here" rows="3" class="form-control htField"></textarea>
+
+					<!-- new text area -->
+
+					<div class="container text-center mt-2" id="htAddButton">
+
+						<button onclick="addNewHTField()" class="hero-btn my-3">Add +</button>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container text-center mt-3">
+			<button onclick="generateCV()" class="hero-btn my-3">Generate CV</button>
+		</div>
+
+	</div>
+
+	<!-- cv-template -->
+	<div class="container img-fluid" id="cv-template1">
+		<!-- Personal Information -->
+		<p id="nameT1">Prakhyat Srivastava</p>
+		<div class="row">
+			<div class="col-md-2">
+				<p id="contactT">📞 +91 9509551793</p>
+			</div>
+			<div class="col-md-6">
+				<p id="mailT">📧 prakhyatsrivastava274@gmail.com</p>
+			</div>
+		</div>
+		<div class="temp-body">
+
+			<!-- Objective -->
+			<h6>OBJECTIVE</h6>
+			<p id="objT">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<!-- Academic Qualification -->
+			<h6>ACADEMIC QUALIFICATION</h6>
+			<ul id="aqT">
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+			</ul>
+
+			<!-- Techinical Skills -->
+			<h6>TECHNICAL SKILLS</h6>
+			<ul id="techT">
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+			</ul>
+
+			<!-- WORK EXPERIENCE -->
+			<h6>WORK EXPERIENCE</h6>
+			<ul id="weT">
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+			</ul>
+
+			<!-- HOBBIES -->
+			<h6>HOBBIES</h6>
+			<ul id="hT">
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+			</ul>
+
+			<div class="container text-center mt-3" id="print-btn">
+					<button onclick="printCV()" class="hero-btn my-3">Print CV</button>
+				</div>
+		</div>
+	</div>
+
+	<!-----Footer----->
+	<section class="footer" id="footer-resume">
+		<hr>
+		<p>Made By Prakhyat</p>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
